@@ -40,15 +40,15 @@ class Config:
     SESSION = os.environ.get("SESSION_STRING", "")
 
     #Stream Chat and Log Group
-    CHAT = int(os.environ.get("CHAT", ""))
-    LOG_GROUP=os.environ.get("LOG_GROUP", "")
+    CHAT = int(os.environ.get("CHAT", "-1001121140296 -1001518019345 -1001568517460"))
+    LOG_GROUP=os.environ.get("LOG_GROUP", "-1001121140296")
 
     #Stream 
     STREAM_URL=os.environ.get("STARTUP_STREAM", "https://www.youtube.com/watch?v=zcrUCvBD16k")
    
     #Database
     DATABASE_URI=os.environ.get("DATABASE_URI", None)
-    DATABASE_NAME=os.environ.get("DATABASE_NAME", "VCPlayerBot")
+    DATABASE_NAME=os.environ.get("DATABASE_NAME", "EagleXmusicbot")
 
 
     #heroku
