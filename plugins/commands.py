@@ -53,7 +53,7 @@ IST = pytz.timezone(Config.TIME_ZONE)
 if Config.DATABASE_URI:
     from utils import db
 
-HOME_TEXT = "<b>Hey  [{}](tg://user?id={}) 🙋‍♂️\n\nIam A Bot Built To Play or Stream Videos In Telegram VoiceChats.\nI Can Stream Any YouTube Video Or A Telegram File Or Even A YouTube Live.</b>"
+HOME_TEXT = "<b>Hey  [{}](tg://user?id={}) 🙋‍♂️\n\nᴀᴋᴜ ᴀᴅᴀʟᴀʜ ʙᴏᴛ ʏᴀɴɢ ᴅɪʀᴀɴᴄᴀɴɢ ᴜɴᴛᴜᴋ ᴍᴇᴍᴜᴛᴀʀ ᴍᴜsɪᴋ ᴅɪ ɢʀᴜᴘ ᴏʙʀᴏʟᴀɴ sᴜᴀʀᴀ ᴀɴᴅᴀ!\nᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ [ᴍᴜsᴛᴀᴄʜᴇ ʙᴇᴀʀᴅ ♔](t.me/Manusiabajingann)</b>"
 admin_filter=filters.create(is_admin) 
 
 @Client.on_message(filters.command(['start', f"start@{Config.BOT_USERNAME}"]))
@@ -63,22 +63,22 @@ async def start(client, message):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(f"Play", callback_data='help_play'),
-                        InlineKeyboardButton(f"Settings", callback_data=f"help_settings"),
-                        InlineKeyboardButton(f"Recording", callback_data='help_record'),
+                        InlineKeyboardButton(f"ᴘʟᴀʏ", callback_data='help_play'),
+                        InlineKeyboardButton(f"sᴇᴛᴛɪɴɢs", callback_data=f"help_settings"),
+                        InlineKeyboardButton(f"ʀᴇᴄᴏʀᴅɪɴɢ", callback_data='help_record'),
                     ],
                     [
-                        InlineKeyboardButton("Scheduling", callback_data="help_schedule"),
-                        InlineKeyboardButton("Controling", callback_data='help_control'),
-                        InlineKeyboardButton("Admins", callback_data="help_admin"),
+                        InlineKeyboardButton("sᴄʜᴇᴅᴜʟɪɴɢ", callback_data="help_schedule"),
+                        InlineKeyboardButton("ᴄᴏɴᴛʀᴏʟɪɴɢ", callback_data='help_control'),
+                        InlineKeyboardButton("ᴀᴅᴍɪɴs", callback_data="help_admin"),
                     ],
                     [
-                        InlineKeyboardButton(f"Misc", callback_data='help_misc'),
-                        InlineKeyboardButton("Close", callback_data="close"),
+                        InlineKeyboardButton(f"ᴍɪsᴄ", callback_data='help_misc'),
+                        InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="close"),
                     ],
                 ]
                 )
-            await message.reply("Learn to use the VCPlayer, Showing help menu, Choose from the below options.",
+            await message.reply("ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ᴍᴇɴɢɢᴜɴᴀᴋᴀɴ ᴇᴀɢʟᴇ, sɪʟᴀʜᴋᴀɴ ᴘɪʟɪʜ ᴅᴀʀɪ ᴏᴘsɪ ᴅɪ ʙᴀᴡᴀʜ ɪɴɪ.",
                 reply_markup=reply_markup,
                 disable_web_page_preview=True
                 )
@@ -129,12 +129,14 @@ async def start(client, message):
         return
     buttons = [
         [
-            InlineKeyboardButton('⚙️ Update Channel', url='https://t.me/subin_works'),
-            InlineKeyboardButton('🧩 Source', url='https://github.com/subinps/VCPlayerBot')
+            InlineKeyboardButton('ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅs', callback_data='help_main'),
         ],
         [
-            InlineKeyboardButton('👨🏼‍🦯 Help', callback_data='help_main'),
-            InlineKeyboardButton('🗑 Close', callback_data='close'),
+            InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url='https://t.me/infobotrelax'),
+            InlineKeyboardButton('sᴜᴘᴘᴏʀᴛ', url='https://t.me/Mutualan_Cari_Teman')
+        ],
+        [
+            InlineKeyboardButton('ᴄʟᴏsᴇ', callback_data='close'),
         ]
     ]
     reply_markup = InlineKeyboardMarkup(buttons)
@@ -148,19 +150,19 @@ async def show_help(client, message):
     reply_markup=InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("Play", callback_data='help_play'),
-                InlineKeyboardButton("Settings", callback_data=f"help_settings"),
-                InlineKeyboardButton("Recording", callback_data='help_record'),
+                InlineKeyboardButton("ᴘʟᴀʏ", callback_data='help_play'),
+                InlineKeyboardButton("sᴇᴛᴛɪɴɢs", callback_data=f"help_settings"),
+                InlineKeyboardButton("ʀᴇᴄᴏʀᴅɪɴɢ", callback_data='help_record'),
             ],
             [
-                InlineKeyboardButton("Scheduling", callback_data="help_schedule"),
-                InlineKeyboardButton("Controling", callback_data='help_control'),
-                InlineKeyboardButton("Admins", callback_data="help_admin"),
+                InlineKeyboardButton("sᴄʜᴇᴅᴜʟɪɴɢ", callback_data="help_schedule"),
+                InlineKeyboardButton("ᴄᴏɴᴛʀᴏʟɪɴɢ", callback_data='help_control'),
+                InlineKeyboardButton("ᴀᴅᴍɪɴs", callback_data="help_admin"),
             ],
             [
-                InlineKeyboardButton("Misc", callback_data='help_misc'),
-                InlineKeyboardButton("Config Vars", callback_data='help_env'),
-                InlineKeyboardButton("Close", callback_data="close"),
+                InlineKeyboardButton("ᴍɪsᴄ", callback_data='help_misc'),
+                InlineKeyboardButton("ᴄᴏɴꜰɪɢ ᴠᴀʀs", callback_data='help_env'),
+                InlineKeyboardButton("☟ ᴄʟᴏsᴇ ☟", callback_data="close"),
             ],
         ]
         )
@@ -188,12 +190,11 @@ async def show_help(client, message):
 async def repo_(client, message):
     buttons = [
         [
-            InlineKeyboardButton('🧩 Repository', url='https://github.com/subinps/VCPlayerBot'),
-            InlineKeyboardButton('⚙️ Update Channel', url='https://t.me/subin_works'),     
+            InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url='https://t.me/infobotrelax'),
+            InlineKeyboardButton('sᴜᴘᴘᴏʀᴛ', url='https://t.me/Mutualan_Cari_Teman')
         ],
         [
-            InlineKeyboardButton("🎞 How to Deploy", url='https://youtu.be/mnWgZMrNe_0'),
-            InlineKeyboardButton('🗑 Close', callback_data='close'),
+            InlineKeyboardButton('☟ ᴄʟᴏsᴇ ☟', callback_data='close'),
         ]
     ]
     await message.reply("<b>The source code of this bot is public and can be found at <a href=https://github.com/subinps/VCPlayerBot>VCPlayerBot.</a>\nYou can deploy your own bot and use in your group.\n\nFeel free to star☀️ the repo if you liked it 🙃.</b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
