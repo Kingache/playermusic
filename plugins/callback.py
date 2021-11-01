@@ -70,7 +70,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         admins = await get_admins(Config.CHAT)
         if query.data.startswith("info"):
             me, you = query.data.split("_")
-            text="Join @subin_works"
+            text="Join @Mutualan_Cari_Teman"
             if you == "volume":
                 await query.answer()
                 await query.message.edit_reply_markup(reply_markup=await volume_buttons())
@@ -333,7 +333,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             elif query.data == "schcancel":
                 buttons = [
                     [
-                        InlineKeyboardButton('Yes, Iam Sure!!', callback_data='schcancelall'),
+                        InlineKeyboardButton('Yes, kamu kntl!!', callback_data='schcancelall'),
                         InlineKeyboardButton('No', callback_data='schclose'),
                     ]
                 ]
